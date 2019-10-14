@@ -1,0 +1,6 @@
+# right way
+SELECT DISTINCT job FROM t_emp;
+# wrong ways
+SELECT DISTINCT job,ename FROM t_emp;
+SELECT DISTINCT job,DISTINCT ename FROM t_emp;
+SELECT job,DISTINCT ename FROM t_emp;
