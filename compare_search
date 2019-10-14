@@ -1,0 +1,18 @@
+# 算数运算符
+SELECT empno,ename,sal,hiredate
+FROM t_emp
+WHERE deptno=10 AND (sal+IFNULL(comm,0))*12>=15000
+AND DATEDIFF(NOW(),hiredate)/365>=20;
+# 比较运算符
+SELECT
+	empno,ename,sal,deptno,hiredate
+FROM t_emp
+WHERE deptno IN(10,20,30) AND job!="SALEMAN"
+AND hiredate<"1985-01-01";
+#比较运算符
+SELECT
+  ename,comm,sal
+FROM t_emp WHERE comm IS NOT NULL
+AND sal BETWEEN 1000 AND 3000
+#AND ename LIKE "_LAKE"
+AND ename REGEXP "^[\\u4e00-\\u9fa5]{2,4}$";# 汉字查询 
