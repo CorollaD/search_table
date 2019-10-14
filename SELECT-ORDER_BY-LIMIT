@@ -1,0 +1,11 @@
+SELECT empno,ename,sal, deptno FROM t_emp ORDER BY sal DESC;
+SELECT empno, ename,hiredate,deptno FROM t_emp ORDER BY hiredate DESC;
+SELECT empno,ename,sal, hiredate FROM t_emp ORDER BY sal DESC,hiredate ASC;
+SELECT 
+  empno,ename,deptno,sal
+FROM t_emp
+ORDER BY deptno,sal DESC;
+# ORDER BY and LIMIT 
+SELECT 
+  empno,ename,sal
+FROM t_emp ORDER BY sal DESC LIMIT 0,5;
