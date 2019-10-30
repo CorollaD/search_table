@@ -1,0 +1,9 @@
+# 查询每名员工的部门信息
+SELECT e.empno,e.ename,d.dname
+FROM t_emp e JOIN t_dept d ON e.deptno=d.deptno;
+
+SELECT e.empno,e.ename,d.deptno
+FROM t_emp e JOIN t_dept d WHERE e.deptno=d.deptno;
+
+SELECT e.empno,e.ename,d.deptno
+FROM t_emp e , t_dept d WHERE e.deptno=d.deptno;
