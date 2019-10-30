@@ -1,0 +1,7 @@
+SELECT e2.empno,e2.ename,e2.sal
+FROM t_emp e1 JOIN t_emp e2 WHERE e2.sal>=AVG(e1.sal);
+
+SELECT e.empno,e.ename,e.sal
+FROM t_emp e JOIN 
+(SELECT AVG(sal) avg FROM t_emp) t
+ON e.sal >=t.avg;
